@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-08-22T17:57:29.4351239Z",
-  "generated_at": "20:57 22.08.2026",
+  "generated_at_utc": "2026-08-30T13:38:39.9833103Z",
+  "generated_at": "16:38 30.08.2026",
   "source_page": "https://remanga.org/card",
-  "frontend_release": "2b529299",
-  "endpoint_count": 837,
+  "frontend_release": "f8e4475c",
+  "endpoint_count": 857,
   "groups": [
     {
       "name": "panel",
-      "count": 134
+      "count": 142
     },
     {
       "name": "users",
@@ -27,7 +27,7 @@
     },
     {
       "name": "publishers",
-      "count": 46
+      "count": 55
     },
     {
       "name": "clubs",
@@ -47,7 +47,7 @@
     },
     {
       "name": "functions",
-      "count": 18
+      "count": 19
     },
     {
       "name": "search",
@@ -86,6 +86,10 @@
       "count": 4
     },
     {
+      "name": "service",
+      "count": 3
+    },
+    {
       "name": "card-gen",
       "count": 2
     },
@@ -100,28 +104,24 @@
     {
       "name": "schema",
       "count": 1
-    },
-    {
-      "name": "service",
-      "count": 1
     }
   ],
   "methods": [
     {
       "name": "DELETE",
-      "count": 48
+      "count": 49
     },
     {
       "name": "GET",
-      "count": 434
+      "count": 447
     },
     {
       "name": "PATCH",
-      "count": 28
+      "count": 29
     },
     {
       "name": "POST",
-      "count": 241
+      "count": 246
     },
     {
       "name": "PUT",

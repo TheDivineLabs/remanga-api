@@ -2,11 +2,11 @@
 
 Справочник автоматически сформирован из публичных JavaScript-сборок сайта [ReManga](https://remanga.org).
 
-- Дата генерации: `20:57 22.08.2026`
-- Версия frontend: `2b529299`
+- Дата генерации: `16:38 30.08.2026`
+- Версия frontend: `f8e4475c`
 - Базовый адрес API: `https://api.remanga.org`
 - Базовый адрес медиа: `https://remanga.org`
-- Извлечено маршрутов: **837**
+- Извлечено маршрутов: **857**
 
 > Это не официальная документация ReManga. Маршруты могут измениться без предупреждения. Клиент сайта помечает маршруты как совместимые с Bearer-токеном, но это не доказывает обязательность авторизации. Полные схемы запросов и ответов отсутствуют в production-сборке, поэтому справочник их не выдумывает.
 
@@ -18,10 +18,10 @@
 
 | Метод | Количество |
 |---|---:|
-| DELETE | 48 |
-| GET | 434 |
-| PATCH | 28 |
-| POST | 241 |
+| DELETE | 49 |
+| GET | 447 |
+| PATCH | 29 |
+| POST | 246 |
 | PUT | 86 |
 
 ## Проверенные полезные маршруты только для чтения
@@ -362,13 +362,14 @@
 | GET | `/api/v2/forum/search/` |  | да |  |
 | GET | `/api/v2/forum/tags/` |  | да |  |
 
-## Служебные функции - `functions` (18)
+## Служебные функции - `functions` (19)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
 | GET | `/api/functions/check-vk-group/` |  | да |  |
 | GET | `/api/functions/feature-flags/site/` |  | да |  |
 | GET | `/api/functions/feature-flags/user/` |  | да |  |
+| POST | `/api/functions/feature-flags/user/` |  | да | application/json |
 | GET | `/api/functions/health-check/` |  | да |  |
 | GET | `/api/functions/popup/` |  | да |  |
 | POST | `/api/functions/search-engine-indexing/` |  | да | application/json |
@@ -489,7 +490,7 @@
 | GET | `/api/v3/inventory/items/cards/{user_id}/` | user_id | да |  |
 | GET | `/api/v3/inventory/wishes/intersection/{partner_id}/` | partner_id | да |  |
 
-## panel - `panel` (134)
+## panel - `panel` (142)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
@@ -545,6 +546,8 @@
 | PUT | `/api/v2/panel/models/comments/{id}/` | id | да | application/json |
 | GET | `/api/v2/panel/models/creators/` |  | да |  |
 | GET | `/api/v2/panel/models/creators/{id}/` | id | да |  |
+| POST | `/api/v2/panel/models/decks/awakened/` |  | да | application/json |
+| POST | `/api/v2/panel/models/events/eventpoints/` |  | да | application/json |
 | GET | `/api/v2/panel/models/forum/posts/` |  | да |  |
 | GET | `/api/v2/panel/models/forum/posts/tags/` |  | да |  |
 | GET | `/api/v2/panel/models/genres/` |  | да |  |
@@ -599,6 +602,12 @@
 | DELETE | `/api/v2/panel/notes/{id}/` | id | да |  |
 | PATCH | `/api/v2/panel/notes/{id}/` | id | да | application/json |
 | PUT | `/api/v2/panel/notes/{id}/` | id | да | application/json |
+| GET | `/api/v2/panel/publisher-reports/` |  | да |  |
+| POST | `/api/v2/panel/publisher-reports/` |  | да | application/json |
+| DELETE | `/api/v2/panel/publisher-reports/{id}/` | id | да |  |
+| GET | `/api/v2/panel/publisher-reports/{id}/` | id | да |  |
+| PATCH | `/api/v2/panel/publisher-reports/{id}/` | id | да | application/json |
+| POST | `/api/v2/panel/publisher-reports/{id}/deadlines/` | id | да | application/json |
 | GET | `/api/v2/panel/reports/` |  | да |  |
 | GET | `/api/v2/panel/reports/{id}/` | id | да |  |
 | PATCH | `/api/v2/panel/reports/{id}/` | id | да | application/json |
@@ -628,7 +637,7 @@
 | GET | `/api/v2/panel/withdraw/receipts/{receipt_id}/` | receipt_id | да |  |
 | PUT | `/api/v2/panel/withdraw/receipts/{receipt_id}/` | receipt_id | да | application/json |
 
-## Издатели - `publishers` (46)
+## Издатели - `publishers` (55)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
@@ -660,7 +669,16 @@
 | GET | `/api/v2/publishers/{publisher_dir}/` | publisher_dir | да |  |
 | POST | `/api/v2/publishers/{publisher_dir}/` | publisher_dir | да | application/json |
 | PUT | `/api/v2/publishers/{publisher_dir}/` | publisher_dir | да | application/json |
-| POST | `/api/v2/publishers/{publisher_id}/add-promo/` | publisher_id | да | application/json |
+| GET | `/api/v2/publishers/{publisher_dir}/reports/` | publisher_dir | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/reports/{id}/` | publisher_dir, id | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/statistics/bookmarks/` | publisher_dir | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/statistics/donates/` | publisher_dir | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/statistics/likes/` | publisher_dir | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/statistics/purchases/` | publisher_dir | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/statistics/referrals/` | publisher_dir | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/statistics/views/` | publisher_dir | да |  |
+| GET | `/api/v2/publishers/{publisher_dir}/titles/` | publisher_dir | да |  |
+| POST | `/api/v2/publishers/{publisher_id}/add-promo/` | publisher_id | да |  |
 | GET | `/api/v2/publishers/{publisher_id}/comments/` | publisher_id | да |  |
 | DELETE | `/api/v2/publishers/{publisher_id}/members/{user_id}/` | publisher_id, user_id | да |  |
 | GET | `/api/v2/publishers/{publisher_id}/members/{user_id}/` | publisher_id, user_id | да |  |
@@ -727,10 +745,12 @@
 | GET | `/api/v2/search/popular/` |  | да |  |
 | POST | `/api/v2/search/popular/` |  | да | application/json |
 
-## service - `service` (1)
+## service - `service` (3)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
+| GET | `/api/v2/service/friends/` |  | да |  |
+| GET | `/api/v2/service/user-block/messages/` |  | да |  |
 | GET | `/api/v2/service/users/` |  | да |  |
 
 ## Магазин - `shop` (10)
