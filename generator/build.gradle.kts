@@ -62,7 +62,7 @@ val portableImage by tasks.registering(Exec::class) {
         "--app-version", project.version.toString(),
         "--icon", project.file("src/main/resources/icons/yin-yang-flaticon-510186.ico").absolutePath,
         "--description", "Re:Manga API Documentation Generator",
-        "--vendor", "Ps1xo-On1kS",
+        "--vendor", "DivineLabs",
         "--add-launcher", "remanga_api_gen_cli=${project.file("src/jpackage/cli.properties").absolutePath}",
     )
 }
