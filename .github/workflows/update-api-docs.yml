@@ -18,7 +18,7 @@ concurrency:
 jobs:
   update:
     name: Проверить и опубликовать новую сборку
-    runs-on: [self-hosted, Windows, X64, remanga-api]
+    runs-on: windows-latest
     defaults:
       run:
         shell: powershell -NoProfile -Command "$script = Get-Content -Raw -Encoding UTF8 '{0}'; Invoke-Expression $script"
