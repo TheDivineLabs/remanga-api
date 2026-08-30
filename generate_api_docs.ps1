@@ -227,6 +227,13 @@ foreach ($group in @($endpoints | Group-Object group | Sort-Object Name)) {
 
 Write-Utf8Text -Path $markdownPath -Text $md.ToString()
 
+$readmePath = Join-Path $OutputDirectory 'README.md'
+if (Test-Path -LiteralPath $readmePath -PathType Leaf) {
+    & (Join-Path $PSScriptRoot 'scripts\Update-ReadmeSnapshot.ps1') `
+        -SummaryPath $snapshotPath `
+        -ReadmePath $readmePath
+}
+
 Write-Host ""
 Write-Host "Готово. Извлечено уникальных маршрутов API: $($endpoints.Count)."
 Write-Host "Markdown: $markdownPath"

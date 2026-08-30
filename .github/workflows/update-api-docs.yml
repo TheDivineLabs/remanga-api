@@ -146,6 +146,7 @@ jobs:
             throw "Документация не содержит маршрутов"
           }
           Write-Host "Проверено маршрутов: $($snapshot.endpoint_count)"
+          & ./scripts/Update-ReadmeSnapshot.ps1
 
       - name: Сформировать список изменений API
         if: steps.version.outputs.is_new == 'true'
@@ -161,7 +162,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add API_REFERENCE.md endpoints.json endpoints.csv snapshot-summary.json
+          git add README.md API_REFERENCE.md endpoints.json endpoints.csv snapshot-summary.json
           git diff --cached --quiet
           if ($LASTEXITCODE -eq 0) {
             Write-Host "Изменений в документации нет"

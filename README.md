@@ -7,8 +7,8 @@
 <p align="center">Неофициальная русскоязычная документация и генератор справочника API</p>
 
 <p align="center">
-  <a href="https://github.com/Ps1xo-On1kS/remanga-api/releases/latest"><img alt="Последний выпуск" src="https://img.shields.io/github/v/release/Ps1xo-On1kS/remanga-api?display_name=tag&style=for-the-badge&color=38bdf8"></a>
-  <a href="https://github.com/Ps1xo-On1kS/remanga-api/actions/workflows/update-api-docs.yml"><img alt="Автообновление" src="https://img.shields.io/github/actions/workflow/status/Ps1xo-On1kS/remanga-api/update-api-docs.yml?style=for-the-badge&label=%D0%B0%D0%B2%D1%82%D0%BE%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5"></a>
+  <a href="https://github.com/TheDivineLabs/remanga-api/releases/latest"><img alt="Последний выпуск" src="https://img.shields.io/github/v/release/TheDivineLabs/remanga-api?display_name=tag&style=for-the-badge&color=38bdf8"></a>
+  <a href="https://github.com/TheDivineLabs/remanga-api/actions/workflows/update-api-docs.yml"><img alt="Автообновление" src="https://img.shields.io/github/actions/workflow/status/TheDivineLabs/remanga-api/update-api-docs.yml?style=for-the-badge&label=%D0%B0%D0%B2%D1%82%D0%BE%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5"></a>
   <a href="https://discord.gg/vF47ExMQpn"><img alt="Discord с подробными обновлениями" src="https://img.shields.io/badge/Discord-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
   <a href="https://t.me/ps1xo_on1ks"><img alt="Telegram автора" src="https://img.shields.io/badge/Telegram-@ps1xo__on1ks-26A5E4?style=for-the-badge&logo=telegram&logoColor=white"></a>
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-2.4.10-8b5cf6?style=for-the-badge&logo=kotlin&logoColor=white">
@@ -23,7 +23,7 @@
 
 ## Что находится в репозитории
 
-- [Полный справочник](API_REFERENCE.md) - 312 маршрутов, сгруппированных по разделам;
+- [Полный справочник](API_REFERENCE.md) - 857 маршрутов, сгруппированных по разделам;
 - [Практическое руководство](GUIDE_RU.md) - каталог карточек, профиль и инвентарь пользователя;
 - `endpoints.json` - полный машиночитаемый снимок;
 - `endpoints.csv` - таблица для Excel и фильтрации;
@@ -31,19 +31,22 @@
 - `generator/` - открытые исходники основного Kotlin-генератора;
 - `generate_api_docs.ps1` - независимый резервный генератор на PowerShell.
 
-Текущий снимок построен по frontend-сборке `5272b905` и содержит:
+<!-- BEGIN GENERATED SNAPSHOT -->
+Текущий снимок построен по frontend-сборке `f8e4475c` и содержит:
 
 | HTTP-метод | Количество |
 |---|---:|
-| GET | 168 |
-| POST | 104 |
-| PUT | 25 |
-| DELETE | 15 |
-| **Всего** | **312** |
+| GET | 447 |
+| POST | 246 |
+| PUT | 86 |
+| PATCH | 29 |
+| DELETE | 49 |
+| **Всего** | **857** |
+<!-- END GENERATED SNAPSHOT -->
 
 ## Готовые выпуски
 
-В разделе [Releases](https://github.com/Ps1xo-On1kS/remanga-api/releases) для каждой обнаруженной frontend-сборки публикуются:
+В разделе [Releases](https://github.com/TheDivineLabs/remanga-api/releases) для каждой обнаруженной frontend-сборки публикуются:
 
 - готовый Markdown-файл `ReManga-API-<версия>.md`;
 - `endpoints.json`;
@@ -85,7 +88,7 @@ GitHub Actions проверяет версию frontend ReManga каждые д�
 
 Для просмотра документации откройте [API_REFERENCE.md](API_REFERENCE.md).
 
-Для ручной генерации скачайте последний архив `remanga-api-gen-<версия>-windows-x64.zip` из [Releases](https://github.com/Ps1xo-On1kS/remanga-api/releases), распакуйте его и запустите:
+Для ручной генерации скачайте последний архив `remanga-api-gen-<версия>-windows-x64.zip` из [Releases](https://github.com/TheDivineLabs/remanga-api/releases), распакуйте его и запустите:
 
 - `remanga_api_gen.exe` - окно с выбором папки, прогрессом и журналом;
 - `remanga_api_gen_cli.exe` - консольный запуск и автоматизация.
