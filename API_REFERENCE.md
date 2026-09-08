@@ -2,11 +2,11 @@
 
 Справочник автоматически сформирован из публичных JavaScript-сборок сайта [ReManga](https://remanga.org).
 
-- Дата генерации: `16:38 30.08.2026`
-- Версия frontend: `f8e4475c`
+- Дата генерации: `07:48 08.09.2026`
+- Версия frontend: `f82ac16c`
 - Базовый адрес API: `https://api.remanga.org`
 - Базовый адрес медиа: `https://remanga.org`
-- Извлечено маршрутов: **857**
+- Извлечено маршрутов: **853**
 
 > Это не официальная документация ReManga. Маршруты могут измениться без предупреждения. Клиент сайта помечает маршруты как совместимые с Bearer-токеном, но это не доказывает обязательность авторизации. Полные схемы запросов и ответов отсутствуют в production-сборке, поэтому справочник их не выдумывает.
 
@@ -19,9 +19,9 @@
 | Метод | Количество |
 |---|---:|
 | DELETE | 49 |
-| GET | 447 |
+| GET | 445 |
 | PATCH | 29 |
-| POST | 246 |
+| POST | 244 |
 | PUT | 86 |
 
 ## Проверенные полезные маршруты только для чтения
@@ -136,14 +136,15 @@
 | DELETE | `/api/v2/billing/withdraw/{withdraw_id}/` | withdraw_id | да |  |
 | POST | `/api/v2/billing/withdraw/{withdraw_id}/receipt/` | withdraw_id | да | application/json |
 
-## card-gen - `card-gen` (2)
+## card-gen - `card-gen` (3)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
 | POST | `/api/v2/card-gen/generate/` |  | да | application/json |
 | GET | `/api/v2/card-gen/status/{task_id}/` | task_id | да |  |
+| GET | `/api/v2/card-gen/title-name/{title_dir}/` | title_dir | да |  |
 
-## Клубы - `clubs` (39)
+## Клубы - `clubs` (40)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
@@ -164,6 +165,7 @@
 | GET | `/api/v2/clubs/{club_dir}/items-requests/{request_id}/` | club_dir, request_id | да |  |
 | PUT | `/api/v2/clubs/{club_dir}/items-requests/{request_id}/` | club_dir, request_id | да | application/json |
 | GET | `/api/v2/clubs/{club_dir}/members/` | club_dir | да |  |
+| GET | `/api/v2/clubs/{club_dir}/members/history/` | club_dir | да |  |
 | GET | `/api/v2/clubs/{club_dir}/ranks/` | club_dir | да |  |
 | DELETE | `/api/v2/clubs/{club_dir}/ranks/{rank_id}/delete/` | club_dir, rank_id | да |  |
 | PUT | `/api/v2/clubs/{club_dir}/ranks/{rank_id}/edit/` | club_dir, rank_id | да | application/json |
@@ -210,19 +212,6 @@
 | POST | `/api/v2/dashboard/{publisher_id}/promo/billing/buy/` | publisher_id | да | application/json |
 | GET | `/api/v2/dashboard/{publisher_id}/promo/statistics/{promo_id}/` | publisher_id, promo_id | да |  |
 | GET | `/api/v2/dashboard/{publisher_id}/promo/statistics/title/{title_id}/` | publisher_id, title_id | да |  |
-
-## dnd - `dnd` (8)
-
-| Метод | Путь | Параметры пути | Bearer | Тип содержимого |
-|---|---|---|:---:|---|
-| POST | `/api/v2/dnd/admin/add_item/` |  | да | application/json |
-| GET | `/api/v2/dnd/characters/{user_id}/` | user_id | да |  |
-| GET | `/api/v2/dnd/characters/classes/` |  | да |  |
-| POST | `/api/v2/dnd/characters/create/` |  | да | application/json |
-| GET | `/api/v2/dnd/characters/races/` |  | да |  |
-| GET | `/api/v2/dnd/characters/skills/` |  | да |  |
-| GET | `/api/v2/dnd/inventory/` |  | да |  |
-| GET | `/api/v2/dnd/locations/` |  | да |  |
 
 ## Записи - `entries` (4)
 
@@ -490,7 +479,7 @@
 | GET | `/api/v3/inventory/items/cards/{user_id}/` | user_id | да |  |
 | GET | `/api/v3/inventory/wishes/intersection/{partner_id}/` | partner_id | да |  |
 
-## panel - `panel` (142)
+## panel - `panel` (143)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
@@ -623,6 +612,7 @@
 | PUT | `/api/v2/panel/requests/config/parameters/cards/` |  | да | application/json |
 | GET | `/api/v2/panel/requests/count/` |  | да |  |
 | GET | `/api/v2/panel/statistics/` |  | да |  |
+| GET | `/api/v2/panel/statistics/moderators/` |  | да |  |
 | GET | `/api/v2/panel/strikes/` |  | да |  |
 | POST | `/api/v2/panel/strikes/` |  | да | application/json |
 | DELETE | `/api/v2/panel/strikes/{id}/` | id | да |  |
@@ -883,7 +873,7 @@
 | POST | `/api/v2/titles/volumes/{branch_id}/` | branch_id | да | application/json |
 | GET | `/api/v3/titles/` |  | да |  |
 
-## Пользователи - `users` (131)
+## Пользователи - `users` (132)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
@@ -913,6 +903,7 @@
 | GET | `/api/users/current/` |  | да |  |
 | PUT | `/api/users/current/` |  | да | application/json |
 | POST | `/api/users/login/` |  | да | application/json |
+| GET | `/api/users/login-streaks/protections/` |  | да |  |
 | DELETE | `/api/users/notifications/` |  | да |  |
 | GET | `/api/users/notifications/` |  | да |  |
 | PUT | `/api/users/notifications/` |  | да | application/json |

@@ -1,17 +1,17 @@
 {
-  "generated_at_utc": "2026-08-30T13:38:39.9833103Z",
-  "generated_at": "16:38 30.08.2026",
+  "generated_at_utc": "2026-09-08T04:48:44.6042891Z",
+  "generated_at": "07:48 08.09.2026",
   "source_page": "https://remanga.org/card",
-  "frontend_release": "f8e4475c",
-  "endpoint_count": 857,
+  "frontend_release": "f82ac16c",
+  "endpoint_count": 853,
   "groups": [
     {
       "name": "panel",
-      "count": 142
+      "count": 143
     },
     {
       "name": "users",
-      "count": 131
+      "count": 132
     },
     {
       "name": "titles",
@@ -31,7 +31,7 @@
     },
     {
       "name": "clubs",
-      "count": 39
+      "count": 40
     },
     {
       "name": "activity",
@@ -74,10 +74,6 @@
       "count": 10
     },
     {
-      "name": "dnd",
-      "count": 8
-    },
-    {
       "name": "forum",
       "count": 8
     },
@@ -86,12 +82,12 @@
       "count": 4
     },
     {
-      "name": "service",
+      "name": "card-gen",
       "count": 3
     },
     {
-      "name": "card-gen",
-      "count": 2
+      "name": "service",
+      "count": 3
     },
     {
       "name": "subscription",
@@ -113,7 +109,7 @@
     },
     {
       "name": "GET",
-      "count": 447
+      "count": 445
     },
     {
       "name": "PATCH",
@@ -121,7 +117,7 @@
     },
     {
       "name": "POST",
-      "count": 246
+      "count": 244
     },
     {
       "name": "PUT",
