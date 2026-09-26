@@ -2,11 +2,11 @@
 
 Справочник автоматически сформирован из публичных JavaScript-сборок сайта [ReManga](https://remanga.org).
 
-- Дата генерации: `20:19 24.09.2026`
-- Версия frontend: `183158f4`
+- Дата генерации: `08:09 26.09.2026`
+- Версия frontend: `878bf893`
 - Базовый адрес API: `https://api.remanga.org`
 - Базовый адрес медиа: `https://remanga.org`
-- Извлечено маршрутов: **853**
+- Извлечено маршрутов: **854**
 
 > Это не официальная документация ReManga. Маршруты могут измениться без предупреждения. Клиент сайта помечает маршруты как совместимые с Bearer-токеном, но это не доказывает обязательность авторизации. Полные схемы запросов и ответов отсутствуют в production-сборке, поэтому справочник их не выдумывает.
 
@@ -19,7 +19,7 @@
 | Метод | Количество |
 |---|---:|
 | DELETE | 49 |
-| GET | 445 |
+| GET | 446 |
 | PATCH | 29 |
 | POST | 244 |
 | PUT | 86 |
@@ -765,7 +765,7 @@
 | GET | `/api/v2/subscription/` |  | да |  |
 | POST | `/api/v2/subscription/trial/` |  | да | application/json |
 
-## Тайтлы - `titles` (103)
+## Тайтлы - `titles` (104)
 
 | Метод | Путь | Параметры пути | Bearer | Тип содержимого |
 |---|---|---|:---:|---|
@@ -833,7 +833,8 @@
 | GET | `/api/v2/titles/chapters/{chapter_id}/` | chapter_id | да |  |
 | PATCH | `/api/v2/titles/chapters/{chapter_id}/` | chapter_id | да | application/json |
 | PUT | `/api/v2/titles/chapters/{chapter_id}/` | chapter_id | да | application/json |
-| POST | `/api/v2/titles/chapters/parse-docs/` |  | да | application/json |
+| GET | `/api/v2/titles/chapters/{chapter_id}/upload-status/` | chapter_id | да |  |
+| POST | `/api/v2/titles/chapters/parse-docs/` |  | да |  |
 | POST | `/api/v2/titles/characters/` |  | да | application/json |
 | GET | `/api/v2/titles/characters/{id}/` | id | да |  |
 | PATCH | `/api/v2/titles/characters/{id}/` | id | да | application/json |
