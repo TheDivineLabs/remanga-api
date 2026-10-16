@@ -1,17 +1,17 @@
 {
-  "generated_at_utc": "2026-10-03T05:27:08.8092479Z",
-  "generated_at": "08:27 03.10.2026",
+  "generated_at_utc": "2026-10-16T16:46:34.1815371Z",
+  "generated_at": "19:46 16.10.2026",
   "source_page": "https://remanga.org/card",
-  "frontend_release": "3f6b3d35",
-  "endpoint_count": 854,
+  "frontend_release": "2100d87c",
+  "endpoint_count": 845,
   "groups": [
     {
       "name": "panel",
-      "count": 143
+      "count": 136
     },
     {
       "name": "users",
-      "count": 132
+      "count": 131
     },
     {
       "name": "titles",
@@ -27,11 +27,11 @@
     },
     {
       "name": "publishers",
-      "count": 55
+      "count": 46
     },
     {
       "name": "clubs",
-      "count": 40
+      "count": 41
     },
     {
       "name": "activity",
@@ -47,7 +47,7 @@
     },
     {
       "name": "functions",
-      "count": 19
+      "count": 18
     },
     {
       "name": "search",
@@ -72,6 +72,10 @@
     {
       "name": "shop",
       "count": 10
+    },
+    {
+      "name": "dnd",
+      "count": 8
     },
     {
       "name": "forum",
@@ -105,11 +109,11 @@
   "methods": [
     {
       "name": "DELETE",
-      "count": 49
+      "count": 48
     },
     {
       "name": "GET",
-      "count": 446
+      "count": 439
     },
     {
       "name": "PATCH",
@@ -117,7 +121,7 @@
     },
     {
       "name": "POST",
-      "count": 244
+      "count": 243
     },
     {
       "name": "PUT",
