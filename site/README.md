@@ -19,7 +19,7 @@ Jekyll Sitemap публикует /remanga-api/sitemap.xml; даты измен�
 
 Это отдельное действие владельца аккаунтов Google и Яндекса:
 1. Добавьте URL-prefix property https://thedivinelabs.github.io/remanga-api/
-   в Google Search Console, а тот же URL сайта — в Яндекс Вебмастер.
+   в Google Search Console. Яндекс Вебмастер добавляет хост https://thedivinelabs.github.io/ целиком.
 2. Для HTML meta tag verification добавьте выданное значение в site/_config.yml:
    google_site_verification: "значение" и/или yandex_verification: "значение".
    Это публичные проверочные значения, не пароли и не API-токены.
@@ -49,3 +49,17 @@ robots.txt действует только в корне хоста. Файл в
 Публичные GitHub Pages разрешены в организации. Для репозитория создан сайт
 с build_type=workflow, развёртывание включено переменной DOCS_SITE_ENABLED=true.
 Приватные Pages в организации остаются запрещены.
+
+## Постоянные подтверждения владения
+
+Google Search Console подтверждён метатегом google_site_verification в конфигурации
+этого сайта. Сохраняйте его при изменении шаблонов и пересборке документации.
+
+Яндекс Вебмастер подтверждён HTML-файлом в корне https://thedivinelabs.github.io/.
+Корневой сайт, проверочный файл и robots.txt хранятся отдельно:
+https://github.com/TheDivineLabs/thedivinelabs.github.io
+Не удаляйте проверочный файл после подтверждения.
+
+Корневой robots.txt разрешает обход и указывает на актуальный sitemap документации.
+Сам sitemap продолжает автоматически собираться из документов этого репозитория.
+Подтверждение владения не означает, что страницы уже проиндексированы.
