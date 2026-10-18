@@ -43,6 +43,10 @@ def main():
         }
         front = "---\n" + "\n".join(f"{key}: {json.dumps(value, ensure_ascii=False)}" for key, value in metadata.items()) + "\n---\n\n"
         (DEST / target).write_text(front + body, encoding="utf-8")
+    # Google also supports UTF-8 plain-text sitemaps, one absolute URL per line.
+    # Keep this independent of Jekyll's XML plugin but derived from the same pages.
+    urls = ["https://thedivinelabs.github.io/remanga-api" + page[1] for page in PAGES.values()]
+    (DEST / "sitemap.txt").write_text("\n".join(urls) + "\n", encoding="utf-8")
     # Structured snapshots stay downloads, not thousands of low-value index pages.
     for name in ("endpoints.json", "endpoints.csv", "snapshot-summary.json"):
         shutil.copy2(ROOT / name, DEST / name)
