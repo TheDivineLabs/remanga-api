@@ -17,7 +17,7 @@
 
 Русскоязычная **документация ReManga API (API Реманга)**: справочник HTTP-методов и маршрутов сайта [ReManga](https://remanga.org), примеры запросов и открытый генератор документации. Маршруты автоматически извлекаются из публичного JavaScript-клиента; справочник доступен в Markdown, JSON и CSV.
 
-**[Справочник методов ReManga API](API_REFERENCE.md)** · [Руководство и примеры запросов](GUIDE_RU.md) · [Скачать генератор](https://github.com/TheDivineLabs/remanga-api/releases)
+**[Сайт документации ReManga API](https://thedivinelabs.github.io/remanga-api/)** · [Справочник методов](https://thedivinelabs.github.io/remanga-api/api-reference/) · [Руководство и примеры](https://thedivinelabs.github.io/remanga-api/guide/) · [Скачать генератор](https://github.com/TheDivineLabs/remanga-api/releases)
 
 **English:** Unofficial ReManga API documentation and open-source endpoint reference generator. Browse HTTP methods and routes, request examples, and downloadable JSON/CSV snapshots. Documentation is in Russian; the portable Windows generator includes both GUI and CLI.
 
