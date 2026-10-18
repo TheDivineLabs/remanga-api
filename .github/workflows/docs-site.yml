@@ -1,0 +1,59 @@
+name: Publish documentation site
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'API_REFERENCE.md'
+      - 'GUIDE_RU.md'
+      - 'endpoints.*'
+      - 'snapshot-summary.json'
+      - 'docs/assets/**'
+      - 'site/**'
+      - 'scripts/prepare_docs_site.py'
+      - '.github/workflows/docs-site.yml'
+  workflow_dispatch:
+  # Updates committed with GITHUB_TOKEN do not trigger another push workflow.
+  workflow_run:
+    workflows: ["Обновление документации API"]
+    branches: [main]
+    types: [completed]
+
+permissions:
+  contents: read
+concurrency:
+  group: documentation-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: python scripts/prepare_docs_site.py
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./_site_source
+          destination: ./_site
+      - uses: actions/upload-pages-artifact@v3
+  deploy:
+    if: vars.DOCS_SITE_ENABLED == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy documentation
+        id: deployment
+        uses: actions/deploy-pages@v4

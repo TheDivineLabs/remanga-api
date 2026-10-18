@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">{% endif %}
+  {% if site.yandex_verification %}<meta name="yandex-verification" content="{{ site.yandex_verification | escape }}">{% endif %}
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 17px/1.65 system-ui,sans-serif; max-width: 1100px; margin: auto; padding: 24px; overflow-wrap: anywhere; }
+    a { color: light-dark(#0757a6,#82c8ff); }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 16px 0; border-bottom: 1px solid #888; }
+    main { min-width: 0; }
+    pre { overflow: auto; padding: 16px; background: light-dark(#f1f4f8,#202832); }
+    code { font-size: .9em; }
+    table { display: block; overflow: auto; border-collapse: collapse; max-width: 100%; }
+    th,td { border: 1px solid #888; padding: 8px; text-align: left; }
+    img { max-width: 100%; height: auto; }
+    footer { margin-top: 40px; border-top: 1px solid #888; font-size: .9em; }
+    h2,h3 { scroll-margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <a href="#content">К содержимому</a>
+  <nav aria-label="Документация">
+    <a href="{{ '/' | relative_url }}">ReManga API</a>
+    <a href="{{ '/api-reference/' | relative_url }}">Справочник API</a>
+    <a href="{{ '/guide/' | relative_url }}">Примеры запросов</a>
+    <a href="https://github.com/TheDivineLabs/remanga-api">GitHub</a>
+    <a href="https://github.com/TheDivineLabs/remanga-api/releases">Скачать</a>
+  </nav>
+  <main id="content">{{ content }}</main>
+  <footer><p>Неофициальный проект TheDivineLabs. Не связан с администрацией ReManga.
+  <a href="https://github.com/TheDivineLabs/remanga-api/blob/main/{{ page.source_file }}">Исходный документ</a>.
+  <a href="{{ '/sitemap.xml' | relative_url }}">Карта сайта</a>.</p></footer>
+</body>
+</html>
+

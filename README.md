@@ -2,7 +2,7 @@
   <a href="https://remanga.org"><img src="docs/assets/remanga-logo.png" width="112" alt="ReManga"></a>
 </p>
 
-<h1 align="center">ReManga API</h1>
+<h1 align="center">ReManga API — документация API Реманга</h1>
 
 <p align="center">Неофициальная русскоязычная документация и генератор справочника API</p>
 
@@ -15,7 +15,11 @@
   <img alt="Windows x64" src="https://img.shields.io/badge/Windows-x64-2563eb?style=for-the-badge&logo=windows11&logoColor=white">
 </p>
 
-Русскоязычный справочник маршрутов API сайта [ReManga](https://remanga.org), автоматически собранный из публичного JavaScript-клиента.
+Русскоязычная **документация ReManga API (API Реманга)**: справочник HTTP-методов и маршрутов сайта [ReManga](https://remanga.org), примеры запросов и открытый генератор документации. Маршруты автоматически извлекаются из публичного JavaScript-клиента; справочник доступен в Markdown, JSON и CSV.
+
+**[Справочник методов ReManga API](API_REFERENCE.md)** · [Руководство и примеры запросов](GUIDE_RU.md) · [Скачать генератор](https://github.com/TheDivineLabs/remanga-api/releases)
+
+**English:** Unofficial ReManga API documentation and open-source endpoint reference generator. Browse HTTP methods and routes, request examples, and downloadable JSON/CSV snapshots. Documentation is in Russian; the portable Windows generator includes both GUI and CLI.
 
 **Репозиторий обновляется автоматически.** Фоновый GitHub Actions runner каждые 12 часов проверяет frontend-сборку ReManga. При обнаружении новой версии документация пересобирается, изменения публикуются в `main`, а готовые Markdown, JSON и CSV добавляются в новый Release.
 

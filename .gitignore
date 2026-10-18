@@ -11,3 +11,7 @@ generator/API_REFERENCE.md
 generator/endpoints.csv
 generator/endpoints.json
 generator/snapshot-summary.json
+
+# Generated documentation website
+_site_source/
+_site/
